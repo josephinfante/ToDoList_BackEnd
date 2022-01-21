@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.apache.catalina.connector.Response;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -19,40 +20,30 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/v1/task")
 public class TaskController {
 
-    private final TaskService taskService;
+    @Autowired
+    private TaskService taskService;
 
-    public TaskController(TaskService taskService) {
-        this.taskService = taskService;
+    @GetMapping
+    public ResponseEntity<List<Task>> getAll() {
+        return ResponseEntity.ok(taskService.getAll());
     }
-    
+
     @PostMapping
     public ResponseEntity<Task> createTask(@RequestBody Task task) {
-        System.out.println(task);
         taskService.createTask(task);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Task> updateTask(@PathVariable("id") String id, @RequestBody Task task) {
+    public ResponseEntity<Task> updateTask(@PathVariable String id, @RequestBody Task task) {
         taskService.updateTask(id, task);
         return ResponseEntity.ok().build();
     }
-
-    @GetMapping
-    public ResponseEntity<List<Task>> getAllTask() {
-        return ResponseEntity.ok(taskService.getAllTask());
-    }
-
-    @GetMapping("/{id}")
-    public ResponseEntity<Task> getTaskById(@PathVariable("id") String id) {
-        Optional<Task> taskOptional = taskService.getTaskById(id);
-        Task task = taskOptional.get();
-        return ResponseEntity.ok().body(task);
-    }
-
+    
     @DeleteMapping("/{id}")
-    public ResponseEntity<Task> deleteTask(@PathVariable("id") String id) {
+    public ResponseEntity<Task> deleteTask(@PathVariable String id) {
         taskService.deleteTask(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
+    
 }
