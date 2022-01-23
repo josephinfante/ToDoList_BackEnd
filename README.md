@@ -60,8 +60,8 @@
 ><br />
 <br />
 <div style="display:flex; width:250px">
-    <div style="width:50px">
-        <img src="https://i.ibb.co/CMTZdc2/isotipo-color.png" alt="isotipo-color" border="0">
+    <div>
+        <img src="https://i.ibb.co/CMTZdc2/isotipo-color.png" alt="isotipo-color" border="0" width="50px">
     </div>
     <p style="margin:auto;">Developed by <strong>Joseph Infante</strong></p>
 </div>
