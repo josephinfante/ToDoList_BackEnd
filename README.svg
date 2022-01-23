@@ -5,6 +5,7 @@
             @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,500;1,600');
             * {
               font-family: 'Poppins', sans-serif;
+              color: white;
             }
             h1 { font-weight: 600; }
             h2 { font-weight: 400; }
@@ -42,6 +43,7 @@
             
             tr:nth-child(even) {
               background-color: #dddddd;
+              color: black;
             }
             .name {
               display: flex;
@@ -105,7 +107,7 @@
             <br />
             <br />
             <div class="name">
-              <img src="https://i.ibb.co/CMTZdc2/isotipo-color.png" alt="isotipo-color" border="0" width="50px"></img>
+              <image width="50" height="50" xlink:href="https://i.ibb.co/CMTZdc2/isotipo-color.png" alt="isotipo-color"></image>
               <span>Developed by <strong>Joseph Infante</strong></span>
             </div>
           </div>
