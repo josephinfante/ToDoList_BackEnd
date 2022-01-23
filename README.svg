@@ -1,3 +1,114 @@
-<svg fill="none" viewBox="0 0 800 400" width="800" height="">
-
+<svg fill="none" viewBox="0 0 800 1100" width="800" height="1100" xmlns="http://www.w3.org/2000/svg">
+    <foreignObject width="100%" height="100%">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,500;1,600');
+            * {
+              font-family: 'Poppins', sans-serif;
+            }
+            h1 { font-weight: 600; }
+            h2 { font-weight: 400; }
+            .border_titles {
+              width:70px; 
+              height:5px; 
+              border-radius:50px; 
+              background:#190082; 
+              margin-bottom: 20px
+            }
+            .border_divs {
+              width:200px; 
+              height:5px; 
+              border-radius:50px; 
+              background:#190082;
+              margin: auto 0px;
+              transform: rotate(90deg);
+            }
+            .divs {
+              display: flex;
+            }
+            .post { color:#FFC600 }
+            .get { color:#34BE82 }
+            .put { color:#2F86A6 }
+            .delete { color:#C85C5C }
+            table {
+              border-collapse: collapse;
+              width: 100%;
+            }
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+            
+            tr:nth-child(even) {
+              background-color: #dddddd;
+            }
+            .name {
+              display: flex;
+            }
+            .name span {
+              margin: auto 0px;
+            }
+          </style>
+          <div class="container">
+            <h1>ToDo List BackEnd Project</h1>
+            <div class="border_titles"></div>
+            <br />
+            <br />
+            <h2>Description</h2>
+            <div class="border_titles"></div>
+            <div class="divs">
+              <div class="border_divs"></div>
+              <p>Hi I'm Joseph a junior fullstack developer. This is an small project created by me. This ToDo List project will allow the user to create task, when this task gets marked as completed by the user, these tasks will be deleted from the user task object.</p>
+            </div>
+            <br />
+            <br />
+            <h2>Prerequisites</h2>
+            <div class="border_titles"></div>
+            <ol>
+              <li>Greater or equal to <a href="https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html" target="_blank">Java 11</a></li>
+              <li><a href="https://maven.apache.org/download.cgi" target="_blank">Maven</a></li>
+              <li><a href="https://www.docker.com/get-started" target="_blank">Docker</a></li>
+              <li><a href="https://www.mongodb.com/try/download/community" target="_blank">MongoDB</a></li>
+            </ol>
+            <br />
+            <br />
+            <h2>Endpoints</h2>
+            <div class="border_titles"></div>
+            <table>
+              <thead>
+                  <tr>
+                    <th>Entity</th>
+                    <th>Create</th>
+                    <th>Read</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>User</td>
+                  <td><strong class="post">POST</strong>: /v1/user</td>
+                  <td><strong class="get">GET</strong>: /v1/user</td>
+                  <td><strong class="put">PUT</strong>: /v1/user/:id</td>
+                  <td><strong class="delete">DELETE</strong>: /v1/user/:id</td>
+                </tr>
+                <tr>
+                  <td>Task</td>
+                  <td><strong class="post">POST</strong>: /v1/task/:userID</td>
+                  <td><strong class="get">GET</strong>: /v1/task</td>
+                  <td><strong class="put">PUT</strong>: /v1/task/:id</td>
+                  <td><strong class="delete">DELETE</strong>: /v1/task/:id</td>
+                </tr>
+              </tbody>
+            </table>
+            <br />
+            <br />
+            <div class="name">
+              <img src="https://i.ibb.co/CMTZdc2/isotipo-color.png" alt="isotipo-color" border="0" width="50px"></img>
+              <span>Developed by <strong>Joseph Infante</strong></span>
+            </div>
+          </div>
+        </div>
+    </foreignObject>
 </svg>
