@@ -26,9 +26,9 @@ public class TaskController {
         return ResponseEntity.ok(taskService.getAll());
     }
 
-    @PostMapping
-    public ResponseEntity<Task> createTask(@RequestBody Task task) {
-        taskService.createTask(task);
+    @PostMapping("/{userid}")
+    public ResponseEntity<Task> createTask(@PathVariable String userid, @RequestBody Task task) {
+        taskService.createTask(userid, task);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
