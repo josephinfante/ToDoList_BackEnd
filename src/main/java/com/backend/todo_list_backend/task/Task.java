@@ -2,13 +2,15 @@ package com.backend.todo_list_backend.task;
 
 import java.time.LocalDateTime;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.Data;
 
 @Data
-@Document
+@AllArgsConstructor
+@NoArgsConstructor
 public class Task {
     
     @Id
